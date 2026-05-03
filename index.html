@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FocusFlow Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"></audio>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h2>⚡ FocusFlow</h2>
+
+    <button class="theme-btn" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+    <div class="stats">
+      <p>Sessions: <span id="sessions">0</span></p>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <h1>Focus Dashboard</h1>
+
+    <!-- TIMER -->
+    <div class="card">
+      <p id="mode">Focus Mode</p>
+      <h2 id="time">25:00</h2>
+
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <div class="controls">
+        <input type="number" id="customTime" placeholder="Minutes">
+        <button onclick="setCustomTime()">Set</button>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+
+    <!-- TASKS -->
+    <div class="card">
+      <h3>Tasks</h3>
+
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Task name">
+        <input type="number" id="taskTime" placeholder="Min">
+        <button onclick="addTask()">Add Task</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
